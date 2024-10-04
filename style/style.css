@@ -15,6 +15,7 @@ section{
 .section-container{
     max-width: 1440px;
     width: 100%;
+    padding: 20px;
 }
 .orange{
     color: #FD853A;
@@ -25,6 +26,7 @@ nav{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    padding: 10px;
 }
 .nav-container{
     max-width: 1298px;
@@ -50,9 +52,10 @@ nav{
     border-radius: 60px;
 }
 .nav-pages:hover{
-    background-color: #FD853A;
+    background-color: #35312fd2;
 }
 .nav-proflie-logo{
+    width: 307px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +64,43 @@ nav{
     font-family: monospace;
     font-size: 26px;
 }
+.nav-proflie-logo:hover img{
+    margin-left: -30px;
+}
+.nav-nameSec{
+    width: 70px;
+    display: flex;
+    align-items: center;
+}
+.nav-nameSec .jrcea{
+    position: absolute;
+    opacity: 100%;
+}
+.nav-nameSec .abcd{
+    position: absolute;
+    opacity: 0%;
+}
+.nav-proflie-logo:hover .jrcea{
+    opacity: 0%;
+}
+.nav-proflie-logo:hover .abcd{
+    opacity: 100%;
+}
+.nav-nameSec span{
+    font-size: 12px;
+    font-weight: 400;
+    color: #9E9E9E;
+}
+.nav-nameSec h3{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    line-height: 17px;
+    margin: 5px;
+}
+.nav-menuBar{
+    display: none;
+}
 /* section 1 */
 .section1-container{
     max-width: 1440px;
@@ -68,11 +108,12 @@ nav{
     height: 846px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .ellipse{
     width: 811px;
-    height: 405px;
     object-fit: contain;
+    position: absolute;
 }
 .frame-hello h1{
     text-align: center;
@@ -126,12 +167,8 @@ nav{
     justify-content: center;
     align-items: flex-end;
 }
-.ellipse{
-    position: absolute;
-}
 .jenny-image{
     width: 952px;
-    height: 636px;
     object-fit: contain;
     position: absolute
 }
@@ -143,7 +180,7 @@ nav{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 812px;
+    bottom: 45px;
     border-radius: 50px;
     backdrop-filter: blur(10px);
 }
@@ -188,13 +225,46 @@ nav{
 .section2-container{
     max-width: 1440px;
     width: 100%;
-    height: 887px;
+    height: auto;
     border-radius: 50px;
-    background-image: url('../images/sec\ 2\ bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding-bottom: 60px;
+    background-image: url('../images/bg\ star.png'),url('../images/sec\ 2\ bg.png');
+    background-position: center center, center center; 
+    background-size: cover, cover;
     position: relative;
+    transition: background-position 2s ease;
+    animation: starr 5s ease-in-out;
+}
+.section2-container:hover{
+    animation: star 5s ease-in-out;
+}
+@keyframes star{
+    0% {
+        background-position: center center, center center;
+    }
+    25% {
+        background-position: right center, center center;
+    }
+    50% {
+        background-position: left center,center center;
+    }
+    100%{
+        background-position: center center, center center;
+    }
+}
+@keyframes starr{
+    0% {
+        background-position: center center, center center;
+    }
+    25% {
+        background-position: left center, center center;
+    }
+    50% {
+        background-position: right center,center center;
+    }
+    100%{
+        background-position: center center, center center;
+    }
 }
 .block2-bouble{
     width: 100%;
@@ -211,6 +281,7 @@ nav{
     color: #ffffff;
     margin: auto;
     padding: 116px 71px;
+    position: relative;
 }
 .myservice-image{
     width: 50%;
@@ -241,6 +312,8 @@ nav{
     justify-content: space-between;
     position: relative;
     margin: auto;
+    gap: 12px;
+    padding: 6px 25px;
 }
 .block2-dots{
     display: flex;
@@ -249,7 +322,6 @@ nav{
 }
 .block2-card{
     width: 416px;
-    height: 508px;
 }
 .block2-singleCard{
     position: relative;
@@ -273,6 +345,25 @@ nav{
     position: absolute;
     right: 0;
     bottom: 0;
+}
+.arrorBtn{
+    width: 28%;
+    height: 23%;
+    background-color: #1D2939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.arrorBtn img{
+    width: 85%;
+    object-fit: contain;
+}
+.arrorBtn:hover{
+    background-color: #FD853A;
 }
 /* block 3 */
 .workExperience{
@@ -329,4 +420,425 @@ nav{
 }
 .block3-experienceRoles{
     display: grid;
+}
+@media (min-width:771px) and (max-width:1024px){
+    .nav-home {
+        padding: 18px 20px;
+    }
+    .nav-pages {
+        padding: 18px 20px;
+    }
+    .nav-proflie-logo {
+        width: 170px;
+    }
+    /* block 1 */
+    .section1-container{
+        height: 710px;
+        overflow: hidden;
+    }
+    .frame-hello {
+        width: 100%;
+        min-width: 1024px;
+        margin-top: 20px;
+    }
+    .swing1 {
+        top: -14px;
+        left: 557px;
+    }
+    .swing2 {
+        top: 225px;
+        left: 173px;
+    }
+    .frame-center{
+        height: 775px;
+    }
+    .frame-hello h1 {
+        font-size: 64px;
+        line-height: 71px;
+    }
+    .frame-image{
+        height: 710px;
+    }
+    .ellipse{
+        width: 702px;
+    }
+    .jenny-image{
+        width: 772px;
+    }
+    .frame-intro img{
+        width: 24px;
+        object-fit: contain;
+    }
+    .frame-intro p{
+        font-size: 12px;
+    }
+    .frame-experince img{
+        width: 100px;
+        object-fit: contain;
+    }
+    .frame-experince h2{
+        font-size: 32px;
+    }
+    .frame-experince h3{
+        font-size: 16px;
+    }
+    .frame-portfolio {
+        width: 292px;
+        height: 68px;
+        bottom: 40px;
+    }
+    .frame-portfolio-leftside {
+        width: 183px;
+        height: 50px;
+        padding: 10px 20px;
+        margin-left: 5px;
+    }
+    .frame-portfolio-leftside p {
+        font-size: 20px;
+    }
+    .frame-portfolio-rightside {
+        font-size: 20px;
+    }
+    /* block 2 */
+    .section2-container{
+        border-radius: 25px;
+    }
+    .myservice-image h1 {
+        font-size: 33px;
+    }
+    .myservice-content P {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .block2-bouble {
+        height: 730px;
+    }
+    .arrorBtn {
+        width: 27%;
+        height: 24%;
+    }
+    .block2-singleCard p {
+        top: 22px;
+        font-size: 24px;
+    }
+}
+@media (min-width:436px) and (max-width:770px){
+    nav{
+        margin-top: 20px;
+    }
+    .nav-container{
+        height: 60px;
+    }
+    .nav-home{
+        display: none;
+    }
+    .nav-pages{
+        display: none;
+    }
+    .nav-nameSec{
+        display: none;
+    }
+    .nav-proflie-logo{
+        justify-content: start;
+    }
+    .nav-menuBar{
+        display: block;
+    }
+    .nav-menuBar img{
+        width: 45px;
+        object-fit: contain;
+    }
+    /* block 1 */
+    .section1-container{
+        height: 665px;
+        overflow: hidden;
+    }
+    .frame-hello{
+        margin-top: 33px;
+        min-width: 770px;
+        height: 204px;
+    }
+    .frame-hello button {
+        width: 80px;
+        height: 33px;
+        font-size: 16px;
+    }
+    .swing1 {
+        position: absolute;
+        top: -4px;
+        left: 420px;
+        width: 25px;
+    }
+    .frame-hello h1 {
+        font-size: 40px;
+        line-height: 57px;
+    }
+    .swing2 {
+        top: 163px;
+        left: 176px;
+        width: 50px;
+    }
+    .frame-center{
+        height: 616px;
+    }
+    .frame-intro img{
+        width: 25px;
+    }
+    .frame-experince h2 {
+        font-size: 26px;
+    }
+    .frame-experince h3 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .frame-intro p{
+        font-size: 12px;
+    }
+    .frame-experince img{
+        width: 100px;
+    }
+    .frame-image{
+        height: 665px;
+    }
+    .jenny-image {
+        width: 100%;
+    }
+    .ellipse {
+        width: 87%;
+    }
+    .frame-portfolio {
+        width: 37%;
+        height: 62px;
+    }
+    .frame-portfolio-leftside {
+        width: 45%;
+        height: 49px;
+    }
+    .frame-portfolio-leftside p {
+        font-size: 14px;
+    }
+    .frame-portfolio-leftside img{
+        width: 20px;
+        object-fit: contain;
+    }
+    .frame-portfolio-rightside {
+        width: 50%;
+        font-size: 16px;
+    }
+    /* block2 */
+    .section2-container{
+        border-radius: 25px;
+    }
+    .myservice-row{
+        padding: 58px 35px;
+    }
+    .myservice-image h1 {
+        font-size: 34px;
+    }
+    .myservice-content P {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .block2-dots img{
+        width: 100px;
+    }
+    /* block3  */
+    .workExperience {
+        text-align: center;
+        font-size: 43px;
+        font-weight: 500;
+        line-height: 64px;
+        padding: 60px 0px;
+        color: #344054;
+    }
+    .block3-experienceContent h1 {
+        font-size: 27px;
+    }
+    .block3-experienceContent p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .block3-experienceContent-grp2 img {
+        width: 35px;
+    }
+    .block2-singleCard p {
+        top: 0px;
+        left: 12px;
+        font-size: 15px;
+    }
+}
+@media (max-width:435px){
+    nav{
+        margin-top: 10px;
+    }
+    .nav-container{
+        height: 60px;
+    }
+    .nav-home{
+        display: none;
+    }
+    .nav-pages{
+        display: none;
+    }
+    .nav-nameSec{
+        display: none;
+    }
+    .nav-proflie-logo{
+        justify-content: start;
+    }
+    .nav-menuBar{
+        display: block;
+    }
+    .nav-menuBar img{
+        width: 45px;
+        object-fit: contain;
+    }
+    /* block1  */
+    .section1-container{
+        height: 341px;
+        overflow: hidden;
+    }
+    .frame-hello{
+        margin-top: 33px;
+        min-width: 770px;
+        height: 132px;
+    }
+    .frame-hello button {
+        width: 80px;
+        height: 33px;
+        font-size: 16px;
+    }
+    .swing1 {
+        position: absolute;
+        top: -11px;
+        left: 420px;
+        width: 25px;
+    }
+    .frame-hello h1 {
+        font-size: 23px;
+        line-height: 33px;
+    }
+    .swing2 {
+        top: 109px;
+        left: 261px;
+        width: 29px;
+    }
+    .frame-center{
+        height: 424px;
+        padding: 0 15px;
+        z-index: 3;
+    }
+    .frame-intro img{
+        width: 15px;
+    }
+    .frame-experince h2 {
+        font-size: 20px;
+    }
+    .frame-experince h3 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .frame-intro p{
+        font-size: 8px;
+        text-shadow: 0px 0px 1px #ffffffe3;
+    }
+    .frame-experince img{
+        width: 80px;
+    }
+    .frame-image{
+        height: 342px;
+    }
+    .jenny-image {
+        width: 321px;
+    }
+    .ellipse {
+        width: 277px;
+    }
+    .frame-portfolio {
+        width: 137px;
+        height: 37px;
+        bottom: 10px;
+        border: 1px solid white;
+    }
+    .frame-portfolio-leftside {
+        width: 47%;
+        height: 26px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .frame-portfolio-leftside p {
+        font-size: 10px;
+    }
+    .frame-portfolio-leftside img{
+        width: 20px;
+        object-fit: contain;
+    }
+    .frame-portfolio-rightside {
+        width: 50%;
+        font-size: 12px;
+    }
+    /* block 2 */
+    .section2-container{
+        border-radius: 15px;
+    }
+    .myservice-row{
+        padding: 45px 15px;
+        flex-direction: column;
+    }
+    .myservice-image {
+        width: 100%;
+    }
+    .myservice-image h1 {
+        font-size: 34px;
+        text-shadow: -1px 2px 3px #100000;
+    }
+    .myservice-content {
+        width: 100%;
+    }
+    .myservice-content P {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .block2-dots {
+        margin-top: 15px;
+    }
+    .block2-singleCard p {
+        top: -6px;
+        left: 10px;
+        font-size: 9px;
+    }
+    .block2-dots img{
+        width: 50px;
+    }
+    /* block 3 */
+    .workExperience {
+        font-size: 30px;
+        padding: 30px 0px;
+    }
+    .block3-experienceContent{
+        flex-direction: column;
+        padding-bottom: 10px;
+        gap: 8px;
+    }
+    .block3-experienceContent-grp1 {
+        width: 100%;
+        gap: 8px;
+    }
+    .block3-experienceContent h1 {
+        font-size: 18px;
+    }
+    .block3-experienceContent-grp2{
+        display: none;
+    }
+    .block3-experienceContent-grp3 {
+        width: 100%;
+        gap: 8px;
+    }
+    .block3-experienceContent p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .block3-experiencePlaces {
+        gap: 0px;
+    }
 }
